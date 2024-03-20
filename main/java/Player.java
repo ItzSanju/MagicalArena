@@ -35,8 +35,9 @@ public class Player {
         this.attack = attack;
     }
 
-    public void decreaseHealth(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'decreaseHealth'");
+    public void decreaseHealth(int amount) {
+        // Ensure health does not go below 0
+        health = Math.max(0, health - amount);
     }
+
 }
